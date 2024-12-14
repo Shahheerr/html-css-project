@@ -1,0 +1,501 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header styles */
+.header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styles */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.logo svg {
+    width: 32px;
+    height: 32px;
+    margin-right: 0.5rem;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navigation styles */
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-item {
+    margin-left: 1.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-login {
+    color: #007bff;
+    border: 1px solid #007bff;
+    margin-left: 1rem;
+}
+
+.btn-login:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.btn-register {
+    background-color: #007bff;
+    color: #ffffff;
+    margin-left: 1rem;
+}
+
+.btn-register:hover {
+    background-color: #0056b3;
+}
+
+/* Mobile menu button */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    /* Mobile menu styles */
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-menu.active {
+        display: block;
+    }
+
+    .mobile-nav-list {
+        list-style-type: none;
+        padding: 1rem;
+    }
+
+    .mobile-nav-item {
+        margin-bottom: 1rem;
+    }
+
+    .mobile-nav-link {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        display: block;
+        padding: 0.5rem 0;
+    }
+
+    .mobile-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
+
+.banner {
+    background-color: #f8f9fa;
+    padding: 4rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.banner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.banner-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.banner-description {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.banner-cta {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.banner-cta:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .banner {
+        padding: 3rem 1rem;
+    }
+
+    .banner-title {
+        font-size: 2rem;
+    }
+
+    .banner-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        padding: 2rem 1rem;
+    }
+
+    .banner-title {
+        font-size: 1.75rem;
+    }
+
+    .banner-description {
+        font-size: 0.875rem;
+    }
+
+    .banner-cta {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+}
+
+.features {
+    padding: 4rem 1rem;
+    background-color: #ffffff;
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features-title {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.feature-card {
+    flex-basis: calc(33.333% - 2rem);
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.feature-description {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .features {
+        padding: 3rem 1rem;
+    }
+
+    .feature-card {
+        flex-basis: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .features {
+        padding: 2rem 1rem;
+    }
+
+    .features-title {
+        font-size: 1.75rem;
+    }
+
+    .feature-card {
+        flex-basis: 100%;
+    }
+}
+
+.how-it-works {
+    padding: 4rem 1rem;
+    background-color: #f8f9fa;
+}
+
+.how-it-works-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.how-it-works-title {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.step {
+    flex-basis: calc(25% - 2rem);
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+.step-number {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 40px;
+    margin-bottom: 1rem;
+}
+
+.step-title {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.step-description {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: -1rem;
+    width: 2rem;
+    height: 2px;
+    background-color: #007bff;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .step {
+        flex-basis: calc(50% - 2rem);
+        margin-bottom: 2rem;
+    }
+
+    .step:nth-child(2)::after {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .how-it-works {
+        padding: 3rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .how-it-works {
+        padding: 2rem 1rem;
+    }
+
+    .how-it-works-title {
+        font-size: 1.75rem;
+    }
+
+    .step {
+        flex-basis: 100%;
+    }
+
+    .step::after {
+        display: none;
+    }
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 3rem 1rem;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex-basis: calc(25% - 2rem);
+    margin-bottom: 2rem;
+}
+
+.footer-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+.footer-links {
+    list-style-type: none;
+}
+
+.footer-link {
+    margin-bottom: 0.5rem;
+}
+
+.footer-link a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link a:hover {
+    color: #007bff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #007bff;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .footer-section {
+        flex-basis: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-section {
+        flex-basis: 100%;
+    }
+}
